@@ -129,7 +129,15 @@ def RETURN_replace_negatives_by_zeros(numbers):
 
     Precondition: The argument is a list of numbers.
     """
-    # TODO: 2. First, READ THE ABOVE TEST CODE.
+    sequence = []
+    for k in range(len(numbers)):
+        if numbers[k] < 0:
+            sequence = sequence + [0]
+        else:
+            sequence = sequence + [numbers[k]]
+    return sequence
+
+    # COMPLETED: 2. First, READ THE ABOVE TEST CODE.
     #          Make sure that you understand it.
     #          Then, IMPLEMENT and test THIS FUNCTION
     #          (using the above code for testing).
@@ -185,7 +193,14 @@ def MUTATE_replace_negatives_by_zeros(numbers):
 
     Precondition: The argument is a list of numbers.
     """
-    # TODO: 3. First, READ THE ABOVE TEST CODE.
+    sequence = []
+    for k in range(len(numbers)):
+        if numbers[k] < 0:
+            numbers[k] = 0
+            sequence = sequence + [numbers[k]]
+        else:
+            sequence = sequence + [numbers[k]]
+    # COMPLETED: 3. First, READ THE ABOVE TEST CODE.
     #          Make sure that you understand it.
     #          Then, IMPLEMENT and test THIS FUNCTION
     #          (using the above code for testing).
